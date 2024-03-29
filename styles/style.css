@@ -1,20 +1,525 @@
 /* 1. don't modify this style */
+@font-face {
+  font-family: poppinsBold;
+  src: url("..//assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: poppinsRegular;
+  src: url("..//assets/fonts/Poppins-Regular.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
 
   box-sizing: border-box;
+  font-family: poppinsRegular;
 }
 
 /* 2. we use :root for default variables */
 :root {
   /* --"somekey-attr": "somevalue" i.e : */
   --black-700: #000;
+  --blueGradiant: #3b2a9f;
+  --primary-100: #5141aa;
+  --secondary: #fa8305;
+  --box_bg: #1c140f;
 }
-/* 3. and we use it like this */
-.elementOne {
-  /* var(--"somekey-attr") */
-  background-color: var(--black-700);
+/* good luck */
+
+body {
+  background-color: var(--blueGradiant);
+}
+/* ----------HEADER---------- */
+.header {
+  background-color: var(--blueGradiant);
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.head_Item {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  transition: ease 150ms;
 }
 
-/* good luck */
+.head_Item:hover {
+  font-size: 120%;
+}
+.head_btn {
+  color: white;
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  transition: ease 150ms;
+}
+.head_btn:hover {
+  scale: 120%;
+  font-weight: 300;
+}
+.current_Item {
+  font-family: poppinsBold;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  padding-bottom: 6px;
+  border-bottom: var(--secondary);
+  border-bottom-style: solid;
+  border-width: 5px;
+  border-radius: 2px;
+  transition: ease 150ms;
+}
+.current_Item:hover {
+  font-size: 120%;
+}
+
+/* ----------MAIN---------- */
+.upper_Main {
+  background-color: var(--blueGradiant);
+  color: white;
+  display: flex;
+  padding: 40px 0px;
+  margin-bottom: 20px;
+  gap: 10%;
+}
+.h1-UperMain {
+  font-family: poppinsBold;
+  font-size: 50px;
+  width: 500px;
+  margin-bottom: 30px;
+}
+.p-UperMain {
+  width: 400px;
+  margin-bottom: 30px;
+}
+.pic-Main {
+  position: relative;
+  left: 100px;
+  width: 500px;
+}
+.pic-MiniMain1 {
+  position: absolute;
+  top: 80px;
+  left: 320px;
+  width: 70px;
+}
+.pic-MiniMain2 {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  width: 100px;
+}
+.pic-MiniMain3 {
+  position: absolute;
+  top: 230px;
+  width: 90px;
+}
+.povered_me {
+  font-family: poppinsBold;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+.btn_GetDetails {
+  color: white;
+  padding: 10px 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 20px;
+  transition: 150ms;
+}
+.btn_GetDetails:hover {
+  scale: 120%;
+}
+
+/* ----------SECTION 2---------- */
+
+.title_Section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.h1-Section2 {
+  color: white;
+  font-family: poppinsBold;
+  font-size: 30px;
+}
+.btn_SeeAll {
+  background-color: var(--primary-100);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: ease 150ms;
+}
+.btn_SeeAll:hover {
+  scale: 120%;
+}
+.image_Cards {
+  width: 250px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  /* transition: ease 50ms; */
+}
+/* .image_Cards:hover{
+  opacity: 75%;
+} */
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: ease 300ms;
+}
+.card:hover {
+  scale: 110%;
+  opacity: 75%;
+  padding: 5px;
+  border: 2px solid var(--blueGradiant);
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px var(--black-700);
+}
+.card_Subtitle {
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  /* transition: ease 50ms; */
+}
+/* .card_Subtitle:hover {
+  scale: 120%;
+} */
+.each_Card {
+  margin: 10px;
+}
+
+/* ----------SECTION 3---------- */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title3 {
+  font-family: poppinsBold;
+  text-align: center;
+  font-size: 45px;
+  padding-top: 70px;
+  color: white;
+  max-inline-size: 80%;
+}
+.main_Section3 {
+  margin-top: 70px;
+  margin-right: 35%;
+  max-width: 50%;
+}
+.img_cover {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image_Cover {
+  width: 1100px;
+  height: 460px;
+  object-fit: cover;
+  object-position: 0px -15px;
+  border-radius: 30px;
+}
+
+/* ----------SECTION 4---------- */
+
+.title4 {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  margin-bottom: 40px;
+}
+.image_grid1 {
+  width: 380px;
+  height: 220px;
+  border-radius: 25px;
+  padding: 10px;
+  object-fit: cover;
+}
+.image_grid2 {
+  width: 240px;
+  height: 220px;
+  border-radius: 25px;
+  padding: 10px;
+  object-fit: cover;
+}
+.image_grid3 {
+  width: 450px;
+  height: 220px;
+  border-radius: 25px;
+  padding: 10px;
+  object-fit: cover;
+}
+.grid_Image {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+/* ----------SECTION 5---------- */
+.main_Section5 {
+  margin-top: 30px;
+  margin-right: 35%;
+  max-width: 50%;
+}
+.card_Black {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--box_bg);
+  padding: 30px 60px;
+  border-radius: 20px;
+  max-width: 90%;
+  gap: 50px;
+}
+.search_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 22px;
+  border-radius: 15px;
+  gap: 20px;
+}
+.search-input {
+  border-style: none;
+  font-size: 15px;
+  height: 35px;
+  width: 300px;
+}
+.continue_btn {
+  color: white;
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  transition: ease 150ms;
+}
+.continue_btn:hover {
+  scale: 120%;
+  font-weight: 300;
+}
+
+/* ----------Footer---------- */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  padding: 40px;
+}
+.internet {
+  background-color: white;
+  padding: 10px;
+  width: 50px;
+  border-radius: 100%;
+  margin: 8px;
+  cursor: pointer;
+  transition: ease 50ms;
+}
+.internet:hover {
+  scale: 120%;
+}
+
+@media only screen and (max-width: 1140px) {
+  /* For Main Width */
+  .upper_Main {
+    justify-content: space-between;
+    padding: 0px 0px;
+    padding-top: 40px;
+    margin-bottom: 50px;
+    gap: 0%;
+    scale: 95%;
+  }
+  .h1-UperMain {
+    font-family: poppinsBold;
+    font-size: 30px;
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  .pic-Main {
+    position: relative;
+    left: 100px;
+    width: 400px;
+  }
+  .pic-MiniMain1 {
+    position: absolute;
+    top: 80px;
+    left: 320px;
+    width: 70px;
+  }
+  .pic-MiniMain2 {
+    position: absolute;
+    top: 10px;
+    left: 110px;
+    width: 100px;
+  }
+  .pic-MiniMain3 {
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    width: 90px;
+  }
+  .cards {
+    grid-template-columns: auto auto;
+    gap: 50px;
+  }
+  .image_Cards {
+    width: 280px;
+    height: 300px;
+  }
+  .title3 {
+    font-size: 40px;
+  }
+  .img_cover {
+    margin-top: 10px;
+  }
+  .image_Cover {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+  .full-ImageGrid {
+    scale: 70%;
+    margin: -50px 0px;
+  }
+  .card_Black {
+    flex-direction: column;
+    max-width: 85%;
+    gap: 0px;
+  }
+  .search-input {
+    font-size: 15px;
+    width: 100%;
+  }
+  .footer-hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For Tablet Width */
+  .head_btn {
+    display: none;
+  }
+  .header {
+    background-color: var(--blueGradiant);
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 25px;
+    align-items: center;
+  }
+  .head_Item {
+    margin: 10px;
+  }
+  .current_Item {
+    margin: 10px;
+  }
+  .upper_Main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+    margin-bottom: 0px;
+    gap: 5%;
+  }
+  .h1-UperMain {
+    font-family: poppinsBold;
+    font-size: 45px;
+    text-align: center;
+    margin: auto;
+    max-height: fit-content;
+    width: 85%;
+    margin-bottom: 10px;
+  }
+  .uperMain_tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .povered_me {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .p-UperMain {
+    text-align: center;
+    margin: auto;
+  }
+  .pic-MiniMain1 {
+    position: absolute;
+    top: 30px;
+    left: 320px;
+    width: 100px;
+  }
+  .pic-MiniMain2 {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 130px;
+  }
+  .pic-MiniMain3 {
+    position: absolute;
+    top: 150px;
+    left: -50px;
+    width: 120px;
+  }
+  .btn_GetDetails {
+    margin: 30px 0px;
+    font-size: 20px;
+    font-family: poppinsBold;
+  }
+  .cards {
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+  .image_Cards {
+    width: 230px;
+    height: 250px;
+  }
+  .title3 {
+    font-size: 35px;
+  }
+  .h1-Section2 {
+    font-size: 25px;
+  }
+  .full-ImageGrid {
+    scale: 50%;
+    margin: -100px 0px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
